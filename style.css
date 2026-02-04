@@ -102,3 +102,33 @@ footer {
     color: #666;
     padding-bottom: 1.5rem;
 }
+
+.image-strip {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-strip a {
+    display: block;
+    flex: 1 1 280px;
+    max-width: 420px;
+}
+
+.image-strip img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.image-strip a:hover img {
+    outline: 2px solid #006989;
+}
