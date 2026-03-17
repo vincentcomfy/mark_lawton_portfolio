@@ -17,12 +17,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding-left: clamp(1rem, 5vw, 15%);
     padding-right: clamp(1rem, 5vw, 15%);
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
-
     background-color: #006989;
 }
 
@@ -73,62 +71,39 @@ body {
     padding-bottom: 3rem;
 }
 
-.bio {
-    max-width: 700px;
-    margin-bottom: 2.5rem;
-}
-
-.bio p {
-    font-size: 1rem;
-    color: #333;
-}
-
+/* --- Gallery Layout --- */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.25rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery a {
+    display: block;
+    overflow: hidden;
+    border-radius: 6px;
 }
 
 .gallery img {
     width: 100%;
     height: 220px;
     object-fit: cover;
-    border-radius: 6px;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
+.gallery a:hover img {
+    transform: scale(1.05);
+    outline: 2px solid #006989;
+}
+
+/* Footer (if needed) */
 footer {
     text-align: center;
     font-size: 0.875rem;
     color: #666;
     padding-bottom: 1.5rem;
-}
-
-.image-strip {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-
-    max-width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.image-strip a {
-    display: block;
-    flex: 1 1 280px;
-    max-width: 420px;
-}
-
-.image-strip img {
-    width: 100%;
-    height: auto;
-    display: block;
-
-    object-fit: cover;
-    border-radius: 6px;
-}
-
-.image-strip a:hover img {
-    outline: 2px solid #006989;
 }
